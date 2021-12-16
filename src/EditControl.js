@@ -1,10 +1,9 @@
-import { PropTypes } from 'prop-types';
-import Draw from 'leaflet-draw'; // eslint-disable-line
-import isEqual from 'fast-deep-equal';
-import React, { useRef } from 'react';
 import { useLeafletContext } from '@react-leaflet/core';
+import isEqual from 'fast-deep-equal';
+import leaflet, { Control, Map } from 'leaflet';
+import { PropTypes } from 'prop-types';
+import React, { useRef } from 'react';
 
-import leaflet, { Map, Control } from 'leaflet';
 
 const eventHandlers = {
   onEdited: 'draw:edited',
@@ -66,9 +65,9 @@ function EditControl(props) {
 
   React.useEffect(() => {
     if (
-      isEqual(props.draw, propsRef.current.draw) &&
-      isEqual(props.edit, propsRef.current.edit) &&
-      props.position === propsRef.current.position
+      isEqual(props.draw, drawRef.current.draw) &&
+      isEqual(props.edit, drawRef.current.edit) &&
+      props.position === drawRef.current.position
     ) {
       return false;
     }
