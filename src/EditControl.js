@@ -1,9 +1,9 @@
 import { useLeafletContext } from '@react-leaflet/core';
 import isEqual from 'fast-deep-equal';
 import leaflet, { Control, Map } from 'leaflet';
+import 'leaflet-draw';
 import { PropTypes } from 'prop-types';
 import React, { useRef } from 'react';
-
 
 const eventHandlers = {
   onEdited: 'draw:edited',

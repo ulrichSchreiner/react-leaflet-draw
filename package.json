@@ -39,7 +39,11 @@
   "homepage": "https://github.com/alex3165/react-leaflet-draw#readme",
   "types": "src/index.d.ts",
   "peerDependencies": {
-    "prop-types": "^15.5.2"
+    "leaflet": "^1.7.0",
+    "leaflet-draw": "^1.0.3",
+    "prop-types": "^15.5.2",
+    "react": "^16.3.0 || ^17.0.0",
+    "react-leaflet": "^3.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
